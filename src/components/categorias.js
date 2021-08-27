@@ -25,38 +25,43 @@ function Item({categoria, categoriasSelecionadas, setCategoriasSelecionadas, ite
 
     const [classeDiv, setClasseDiv] = useState("item roboto " + categoria);
     const [classeContador, setClasseContador] = useState("contador escondido");
-    const [contador, setContador] = useState(0);
+    const [contador, setContador] = useState(1);
 
     function selecionar(e) {
         setClasseDiv("item roboto selecionado " + categoria);
         setClasseContador("contador");
 
         if(classeDiv !== ("item roboto selecionado " + categoria)){
-            alterarContador("+", e);
+            setCategoriasSelecionadas({...categoriasSelecionadas, [categoria]: [...categoriasSelecionadas[categoria], 
+            {nome: item.nome, preco: item.preco, quantidade: 1}]});
         }
     }
 
     function alterarContador(button, e) {
+
+        const updatedItem = categoriasSelecionadas[categoria].map(() => {
+            return {nome: item.nome, preco: item.preco, quantidade: button === "+" ? contador + 1 : contador - 1}
+        })
+
         if(button === "+") {
             setContador(contador + 1);
-            setGlobalContador(globalContador + 1);
-            setCategoriasSelecionadas({...categoriasSelecionadas, [categoria]: [...categoriasSelecionadas[categoria], 
-            {nome: item.nome, preco: item.preco, id: contador + 1}]});
         }
         else {
             setContador(contador - 1);
-            setCategoriasSelecionadas({...categoriasSelecionadas, [categoria]: categoriasSelecionadas[categoria].filter((elemento) => {
-                if(elemento.nome === item.nome) {
-                    if(elemento.id === contador) return false;
-                }
-                return true;
-            })});
+            // setCategoriasSelecionadas({...categoriasSelecionadas, [categoria]: categoriasSelecionadas[categoria].filter((elemento) => {
+            //     if(elemento.nome === item.nome) {
+            //         if(elemento.id === contador) return false;
+            //     }
+            //     return true;
+            // })});
         }
+
+        setCategoriasSelecionadas({...categoriasSelecionadas, [categoria]: updatedItem});
         
         if(contador === 1 && button === "-") {
             setClasseDiv("item roboto " + categoria);
             setClasseContador("contador escondido");
-            setContador(0);
+            setContador(1);
         }
 
         e.stopPropagation();
