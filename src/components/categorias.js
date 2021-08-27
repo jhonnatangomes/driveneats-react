@@ -3,7 +3,8 @@ import { useState } from "react";
 export default function Categorias({pratos, categoriasSelecionadas, setCategoriasSelecionadas}){
 
     const [globalContador, setGlobalContador] = useState(0);
-
+    
+    
     return (
         <div className={pratos.categoria}>
 
@@ -39,24 +40,21 @@ function Item({categoria, categoriasSelecionadas, setCategoriasSelecionadas, ite
         if(button === "+") {
             setContador(contador + 1);
             setGlobalContador(globalContador + 1);
+            setCategoriasSelecionadas({...categoriasSelecionadas, [categoria]: globalContador + 1});
         }
         else {
             setContador(contador - 1);
             setGlobalContador(globalContador - 1);
+            setCategoriasSelecionadas({...categoriasSelecionadas, [categoria]: globalContador - 1});
         }
-
-        setCategoriasSelecionadas({...categoriasSelecionadas, [categoria]: globalContador});
         
         if(contador === 1 && button === "-") {
             setClasseDiv("item roboto " + categoria);
             setClasseContador("contador escondido");
             setContador(0);
-            setCategoriasSelecionadas({...categoriasSelecionadas, [categoria]: globalContador});
         }
 
         e.stopPropagation();
-        
-        
     }
 
     return (
