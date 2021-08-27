@@ -129,6 +129,29 @@ ion-icon{
     padding-bottom: 16px;
 }
 
+.contador{
+    position:absolute;
+    right: 14px;
+    bottom: 10px;
+    display: flex;
+    width: 47px;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.contador button:first-child{
+    color:#CF2B2B;
+}
+
+.contador button:last-child{
+    color: #32B72F;
+}
+
+.contador button{
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+}
 
 .pedido{
     width: 100%;
@@ -144,7 +167,7 @@ ion-icon{
 }
 
 
-button{
+.pedido button{
     width: 88vw;
     height: 61px;
     font-weight: 400;
