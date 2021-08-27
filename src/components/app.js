@@ -5,7 +5,9 @@ import { useState } from "react";
 
 export default function App(){
 
-    const [categoriasSelecionadas, setCategoriasSelecionadas] = useState({pratos: 0, bebidas: 0, sobremesas: 0});
+    const [categoriasSelecionadas, setCategoriasSelecionadas] = useState({
+        pratos: [], bebidas: [], sobremesas: []
+    });
 
     return (
         <>

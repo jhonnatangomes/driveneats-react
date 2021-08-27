@@ -40,12 +40,17 @@ function Item({categoria, categoriasSelecionadas, setCategoriasSelecionadas, ite
         if(button === "+") {
             setContador(contador + 1);
             setGlobalContador(globalContador + 1);
-            setCategoriasSelecionadas({...categoriasSelecionadas, [categoria]: globalContador + 1});
+            setCategoriasSelecionadas({...categoriasSelecionadas, [categoria]: [...categoriasSelecionadas[categoria], 
+            {nome: item.nome, preco: item.preco, id: contador + 1}]});
         }
         else {
             setContador(contador - 1);
-            setGlobalContador(globalContador - 1);
-            setCategoriasSelecionadas({...categoriasSelecionadas, [categoria]: globalContador - 1});
+            setCategoriasSelecionadas({...categoriasSelecionadas, [categoria]: categoriasSelecionadas[categoria].filter((elemento) => {
+                if(elemento.nome === item.nome) {
+                    if(elemento.id === contador) return false;
+                }
+                return true;
+            })});
         }
         
         if(contador === 1 && button === "-") {
