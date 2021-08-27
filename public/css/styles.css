@@ -180,6 +180,10 @@ ion-icon{
     text-align: center;
 }
 
+.pedido button.fechar-pedido{
+    background-color: #32B72F;
+}
+
 .selecionado{
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
 }

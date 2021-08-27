@@ -93,10 +93,10 @@ let pratos = [
     }
 ]
 
-export default function Corpo(){
+export default function Corpo({categoriasSelecionadas, setCategoriasSelecionadas}){
     return(
         <div className="corpo">
-            {pratos.map((prato, i) => <Categorias pratos={prato} key={i}/>)}
+            {pratos.map((prato, i) => <Categorias pratos={prato} key={i} categoriasSelecionadas={categoriasSelecionadas} setCategoriasSelecionadas={setCategoriasSelecionadas}/>)}
         </div>
     );
 }
