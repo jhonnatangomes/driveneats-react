@@ -39,14 +39,17 @@ function Item({categoria, categoriasSelecionadas, setCategoriasSelecionadas, ite
 
     function alterarContador(button, e) {
 
-        const updatedItem = categoriasSelecionadas[categoria].map(() => {
-            return {nome: item.nome, preco: item.preco, quantidade: button === "+" ? contador + 1 : contador - 1}
-        })
-
+        let updatedItem = {}
         if(button === "+") {
+            updatedItem = categoriasSelecionadas[categoria].map((elemento) => {
+                return {nome: elemento.nome, preco: elemento.preco, quantidade: elemento.nome === item.nome ? contador + 1 : elemento.quantidade}
+            });
             setContador(contador + 1);
         }
         else {
+            updatedItem = categoriasSelecionadas[categoria].map((elemento) => {
+                return {nome: elemento.nome, preco: elemento.preco, quantidade: elemento.nome === item.nome ? contador - 1  : elemento.quantidade}
+            });
             setContador(contador - 1);
             // setCategoriasSelecionadas({...categoriasSelecionadas, [categoria]: categoriasSelecionadas[categoria].filter((elemento) => {
             //     if(elemento.nome === item.nome) {
@@ -62,6 +65,12 @@ function Item({categoria, categoriasSelecionadas, setCategoriasSelecionadas, ite
             setClasseDiv("item roboto " + categoria);
             setClasseContador("contador escondido");
             setContador(1);
+            setCategoriasSelecionadas({...categoriasSelecionadas, [categoria] : categoriasSelecionadas[categoria].filter((elemento) => {
+                if(elemento.nome === item.nome){
+                    if(elemento.quantidade - 1 === 0) return false;
+                }
+                return true;
+            })});
         }
 
         e.stopPropagation();
