@@ -1,6 +1,6 @@
 import Categorias from "./categorias";
 
-let pratos = [
+let categorias = [
     {
         categoria: "pratos",
         frase: "Primeiro, seu prato",
@@ -78,7 +78,7 @@ let pratos = [
                 image: "imagens/sorvete.jpg"
             },
             {
-                nome: "petit-gateau",
+                nome: "Petit-gateau",
                 descricao: "Bolo com sorvete",
                 preco: "R$ 19,90",
                 image: "imagens/petit-gateau.jpg"
@@ -93,10 +93,10 @@ let pratos = [
     }
 ]
 
-export default function Corpo({categoriasSelecionadas, setCategoriasSelecionadas}){
+export default function Corpo({itensSelecionados, setItensSelecionados}){
     return(
         <div className="corpo">
-            {pratos.map((prato, i) => <Categorias pratos={prato} key={i} categoriasSelecionadas={categoriasSelecionadas} setCategoriasSelecionadas={setCategoriasSelecionadas}/>)}
+            {categorias.map((categoria, i) => <Categorias pratos={categoria} key={i} itensSelecionados={itensSelecionados} setItensSelecionados={setItensSelecionados}/>)}
         </div>
     );
 }

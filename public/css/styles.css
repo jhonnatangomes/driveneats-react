@@ -187,6 +187,7 @@ ion-icon{
 
 .pedido button.fechar-pedido{
     background-color: #32B72F;
+    cursor: pointer;
 }
 
 .selecionado{
