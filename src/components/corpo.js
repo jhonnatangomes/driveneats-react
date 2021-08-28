@@ -1,4 +1,16 @@
 import Categorias from "./categorias";
+import aguaDeCoco from "../imagens/agua-de-coco.jpg";
+import churrasco from "../imagens/churrasco.jpg";
+import coca from "../imagens/coca.jpg";
+import guaranaAmazonia from "../imagens/guarana-amazonia.jpg";
+import guaranaJesus from "../imagens/guarana-jesus.jpg";
+import petitGateau from "../imagens/petit-gateau.jpg";
+import prato from "../imagens/prato.jpeg";
+import pudim from "../imagens/pudim.jpg";
+import salada from "../imagens/salada.jpg";
+import sobremesaDeMorango from "../imagens/sobremesa-de-morango.jpeg";
+import sorvete from "../imagens/sorvete.jpg";
+import strogonoffDeFrango from "../imagens/strogonoff-de-frango.jpg";
 
 let categorias = [
     {
@@ -9,25 +21,25 @@ let categorias = [
                 nome: "Frango Yin Yang",
                 descricao: "Um pouco de batata, um pouco de salada",
                 preco: "R$ 14,90",
-                image: "imagens/prato.jpeg"
+                image: prato
             },
             {
                 nome: "Strogonoff de Frango",
                 descricao: "Strogonoff de frango com batata palha e arroz",
                 preco: "R$ 18,90",
-                image: "imagens/strogonoff-de-frango.jpg"
+                image: strogonoffDeFrango
             },
             {
                 nome: "Churrasco",
                 descricao: "Churrasco, arroz e acompanhamento",
                 preco: "R$ 20,90",
-                image: "imagens/churrasco.jpg"
+                image: churrasco
             },
             {
                 nome: "Salada",
                 descricao: "Uma salada deliciosa",
                 preco: "R$ 16,90",
-                image: "imagens/salada.jpg"
+                image: salada
             }
         ]
     },
@@ -39,25 +51,25 @@ let categorias = [
                 nome: "Coquinha gelada",
                 descricao: "Lata 350ml",
                 preco: "R$ 4,90",
-                image: "imagens/coca.jpg"
+                image: coca
             },
             {
                 nome: "Guaraná Jesus",
                 descricao: "Refrigerante de qualidade do Maranhão",
                 preco: "R$ 3,90",
-                image: "imagens/guarana-jesus.jpg"
+                image: guaranaJesus
             },
             {
                 nome: "Água de coco",
                 descricao: "Água de coco natural e gelada",
                 preco: "R$ 5,90",
-                image: "imagens/agua-de-coco.jpg"
+                image: aguaDeCoco
             },
             {
                 nome: "Guaraná da Amazônia",
                 descricao: "Um delicioso guaraná da amazônia",
                 preco: "R$ 7,90",
-                image: "imagens/guarana-amazonia.jpg"
+                image: guaranaAmazonia
             }
         ]
     },
@@ -69,25 +81,25 @@ let categorias = [
                 nome: "Pudim",
                 descricao: "Apenas pudim",
                 preco: "R$ 7,90",
-                image: "imagens/pudim.jpg"
+                image: pudim
             },
             {
                 nome: "Sorvete",
                 descricao: "Iogurte grego, o melhor sabor de todos",
                 preco: "R$ 10,90",
-                image: "imagens/sorvete.jpg"
+                image: sorvete
             },
             {
                 nome: "Petit-gateau",
                 descricao: "Bolo com sorvete",
                 preco: "R$ 19,90",
-                image: "imagens/petit-gateau.jpg"
+                image: petitGateau
             },
             {
                 nome: "Sobremesa de morango",
                 descricao: "Sobremesa de chocolate com morango e chantilly",
                 preco: "R$ 14,90",
-                image: "imagens/sobremesa-de-morango.jpeg"
+                image: sobremesaDeMorango
             }
         ]
     }
