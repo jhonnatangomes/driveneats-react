@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/driveneats-react/static/css/main.48309a3e.chunk.css",
+    "main.js": "/driveneats-react/static/js/main.c19d2f9e.chunk.js",
+    "main.js.map": "/driveneats-react/static/js/main.c19d2f9e.chunk.js.map",
+    "runtime-main.js": "/driveneats-react/static/js/runtime-main.602a9922.js",
+    "runtime-main.js.map": "/driveneats-react/static/js/runtime-main.602a9922.js.map",
+    "static/js/2.7b552750.chunk.js": "/driveneats-react/static/js/2.7b552750.chunk.js",
+    "static/js/2.7b552750.chunk.js.map": "/driveneats-react/static/js/2.7b552750.chunk.js.map",
+    "index.html": "/driveneats-react/index.html",
+    "static/css/main.48309a3e.chunk.css.map": "/driveneats-react/static/css/main.48309a3e.chunk.css.map",
+    "static/js/2.7b552750.chunk.js.LICENSE.txt": "/driveneats-react/static/js/2.7b552750.chunk.js.LICENSE.txt",
+    "static/media/coca.18bf3cb5.jpg": "/driveneats-react/static/media/coca.18bf3cb5.jpg",
+    "static/media/guarana-amazonia.5a5d91cb.jpg": "/driveneats-react/static/media/guarana-amazonia.5a5d91cb.jpg",
+    "static/media/guarana-jesus.328767e1.jpg": "/driveneats-react/static/media/guarana-jesus.328767e1.jpg",
+    "static/media/petit-gateau.f96771cf.jpg": "/driveneats-react/static/media/petit-gateau.f96771cf.jpg",
+    "static/media/prato.2053bd73.jpeg": "/driveneats-react/static/media/prato.2053bd73.jpeg",
+    "static/media/pudim.b410c6cc.jpg": "/driveneats-react/static/media/pudim.b410c6cc.jpg",
+    "static/media/salada.61774de8.jpg": "/driveneats-react/static/media/salada.61774de8.jpg",
+    "static/media/sobremesa-de-morango.db23a95b.jpeg": "/driveneats-react/static/media/sobremesa-de-morango.db23a95b.jpeg",
+    "static/media/sorvete.ae92b77c.jpg": "/driveneats-react/static/media/sorvete.ae92b77c.jpg",
+    "static/media/strogonoff-de-frango.67dfa633.jpg": "/driveneats-react/static/media/strogonoff-de-frango.67dfa633.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.602a9922.js",
+    "static/js/2.7b552750.chunk.js",
+    "static/css/main.48309a3e.chunk.css",
+    "static/js/main.c19d2f9e.chunk.js"
+  ]
+}
