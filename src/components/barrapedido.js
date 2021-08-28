@@ -19,8 +19,8 @@ export default function BarraPedido({categoriasSelecionadas}) {
         for(let key of Object.keys(categoriasSelecionadas)){
             text += `${key[0].toUpperCase() + key.slice(1)} : `;
             for(let item of categoriasSelecionadas[key]){
-                text += `${item.nome}\n`;
-                total += Number(item.preco.slice(3).replace(",", "."));
+                text += `${item.nome} ${item.quantidade > 1 ? `(${item.quantidade}x)` : ``}\n`;
+                total += Number(item.preco.slice(3).replace(",", ".")) * item.quantidade;
             }
         }
 
