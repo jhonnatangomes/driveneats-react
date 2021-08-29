@@ -1,4 +1,5 @@
-import Item from "../Item";
+import Item from "../itens/Item";
+import "./categoria.css";
 
 export default function Categoria({pratos, itensSelecionados, setItensSelecionados}){
     return (

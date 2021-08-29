@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./item.css";
 
 export default function Item({categoria, itensSelecionados, setItensSelecionados, item}) {
 
@@ -6,10 +7,10 @@ export default function Item({categoria, itensSelecionados, setItensSelecionados
     const [classeContador, setClasseContador] = useState("contador escondido");
     const [contador, setContador] = useState(1);
 
-    function selecionar(e) {
+    function selecionar() {
         setClasseDiv("item roboto selecionado");
         setClasseContador("contador");
-
+        
         if(classeDiv !== ("item roboto selecionado")){
             setItensSelecionados({...itensSelecionados, [categoria]: [...itensSelecionados[categoria], 
             {nome: item.nome, preco: item.preco, quantidade: 1}]});
@@ -17,7 +18,6 @@ export default function Item({categoria, itensSelecionados, setItensSelecionados
     }
 
     function alterarContador(button, e) {
-
         let updatedItem = {}
         if(button === "+") {
             updatedItem = itensSelecionados[categoria].map((elemento) => {
@@ -33,19 +33,20 @@ export default function Item({categoria, itensSelecionados, setItensSelecionados
         }
 
         setItensSelecionados({...itensSelecionados, [categoria]: updatedItem});
-        
+
         if(contador === 1 && button === "-") {
+            updatedItem = itensSelecionados[categoria].filter((elemento) => elemento.nome !== item.nome)
             setClasseDiv("item roboto");
             setClasseContador("contador escondido");
             setContador(1);
-            setItensSelecionados({...itensSelecionados, [categoria] : itensSelecionados[categoria].filter((elemento) => elemento.nome !== item.nome)});
+            setItensSelecionados({...itensSelecionados, [categoria]: updatedItem});
         }
 
         e.stopPropagation();
     }
 
     return (
-        <div className={classeDiv} onClick={(e) => selecionar(e)}>
+        <div className={classeDiv} onClick={() => selecionar()}>
                     <img src={item.image} alt={item.descricao} />
                     <p className="nome-item">{item.nome}</p>
                     <p className="descricao-item">{item.descricao}</p>

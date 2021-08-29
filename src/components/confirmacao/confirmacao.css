@@ -1,0 +1,63 @@
+.tela-confirmacao {
+    margin: 92px 4vw 0 5vw;
+    padding-top: 31px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.titulo-confirmacao {
+    font-size: 26px;
+}
+
+.itens-confirmacao {
+    margin: 33px 0;
+    width: 91vw;
+    background-color: white;
+    padding: 30px 25px 24px 26px;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.15);
+    border-radius: 9px;
+    font-size: 22px;
+}
+
+.item-confirmacao {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-confirmacao:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.total-confirmacao {
+    font-weight: 700;
+}
+
+.container-botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-botoes button {
+    width: 80.4vw;
+    height: 52px;
+    cursor: pointer;
+}
+
+.botao-confirmacao {
+    background-color: #50D074;
+    border-radius: 100px;
+    border: none;
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.botao-cancelar {
+    background-color: #EEEEEE;
+    border: none;
+    color: #777777;
+    font-size: 20px;
+    font-weight: 700;
+}

@@ -1,7 +1,7 @@
 import Topo from "./topo/Topo";
 import Corpo from "./corpo/Corpo";
-import BarraPedido from "./BarraPedido";
-import Confirmacao from "./Confirmacao";
+import BarraPedido from "./barrapedido/BarraPedido";
+import Confirmacao from "./confirmacao/Confirmacao";
 import React, { useState } from "react";
 import "../css/reset.css";
 import "../css/styles.css";
@@ -22,7 +22,7 @@ export default function App(){
             <Topo />
             <Switch>
                 <Route path="/revisar">
-                    <Confirmacao itens={itensSelecionados} setItens={setItensSelecionados}/>
+                    <Confirmacao itensSelecionados={itensSelecionados} setItensSelecionados={setItensSelecionados}/>
                 </Route>
                 <Route path="/">
                     <Corpo itensSelecionados={itensSelecionados} setItensSelecionados={setItensSelecionados}/>
