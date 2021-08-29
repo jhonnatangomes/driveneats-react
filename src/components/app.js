@@ -22,7 +22,7 @@ export default function App(){
             <Topo />
             <Switch>
                 <Route path="/revisar">
-                    <Confirmacao />
+                    <Confirmacao itens={itensSelecionados} setItens={setItensSelecionados}/>
                 </Route>
                 <Route path="/">
                     <Corpo itensSelecionados={itensSelecionados} setItensSelecionados={setItensSelecionados}/>

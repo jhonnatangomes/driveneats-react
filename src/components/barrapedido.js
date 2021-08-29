@@ -10,7 +10,7 @@ export default function BarraPedido({itensSelecionados, setItensSelecionados}) {
         }
 
         console.log(itensSelecionados);
-        // if(fechar) escreverConfirmacao();
+        if(fechar) concluirPedido();
         return fechar;
     }
 
@@ -33,18 +33,9 @@ export default function BarraPedido({itensSelecionados, setItensSelecionados}) {
         URL_WHATSAPP += encodeURIComponent(text);
     }
 
-    // function escreverConfirmacao() {
-    //     let itens = [];
-    //     for(let key of Object.keys(itensSelecionados)){
-    //         for(let item of itensSelecionados[key]){
-    //             itens.push(item);
-    //         }
-    //     }
-    // }
-
     return (
         <div className="barra-pedido">
-        {fecharPedido() ? <Link to={{pathname: "/revisar", state: itensSelecionados}}><div className="pedido">
+        {fecharPedido() ? <Link to={{pathname: "/revisar", state: URL_WHATSAPP}}><div className="pedido">
         <button className="roboto fechar-pedido">Fechar pedido</button>
         </div></Link> : <div className="pedido">
             <button className="roboto">Selecione os 3 itens para fechar o pedido</button>
