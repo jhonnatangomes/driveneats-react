@@ -1,4 +1,4 @@
-import Item from "./item";
+import Item from "../Item";
 
 export default function Categoria({pratos, itensSelecionados, setItensSelecionados}){
     return (

@@ -1,7 +1,7 @@
-import Topo from "./topo";
-import Corpo from "./corpo";
-import BarraPedido from "./barrapedido";
-import Confirmacao from "./confirmacao";
+import Topo from "./topo/Topo";
+import Corpo from "./corpo/Corpo";
+import BarraPedido from "./BarraPedido";
+import Confirmacao from "./Confirmacao";
 import React, { useState } from "react";
 import "../css/reset.css";
 import "../css/styles.css";

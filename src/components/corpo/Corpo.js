@@ -1,16 +1,17 @@
-import Categoria from "./categoria";
-import aguaDeCoco from "../imagens/agua-de-coco.jpg";
-import churrasco from "../imagens/churrasco.jpg";
-import coca from "../imagens/coca.jpg";
-import guaranaAmazonia from "../imagens/guarana-amazonia.jpg";
-import guaranaJesus from "../imagens/guarana-jesus.jpg";
-import petitGateau from "../imagens/petit-gateau.jpg";
-import prato from "../imagens/prato.jpeg";
-import pudim from "../imagens/pudim.jpg";
-import salada from "../imagens/salada.jpg";
-import sobremesaDeMorango from "../imagens/sobremesa-de-morango.jpeg";
-import sorvete from "../imagens/sorvete.jpg";
-import strogonoffDeFrango from "../imagens/strogonoff-de-frango.jpg";
+import Categoria from "../categorias/Categoria";
+import aguaDeCoco from "./imagens/agua-de-coco.jpg";
+import churrasco from "./imagens/churrasco.jpg";
+import coca from "./imagens/coca.jpg";
+import guaranaAmazonia from "./imagens/guarana-amazonia.jpg";
+import guaranaJesus from "./imagens/guarana-jesus.jpg";
+import petitGateau from "./imagens/petit-gateau.jpg";
+import prato from "./imagens/prato.jpeg";
+import pudim from "./imagens/pudim.jpg";
+import salada from "./imagens/salada.jpg";
+import sobremesaDeMorango from "./imagens/sobremesa-de-morango.jpeg";
+import sorvete from "./imagens/sorvete.jpg";
+import strogonoffDeFrango from "./imagens/strogonoff-de-frango.jpg";
+import "./corpo.css";
 
 let categorias = [
     {

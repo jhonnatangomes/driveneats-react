@@ -1,3 +1,5 @@
+import "./topo.css";
+
 export default function Topo() {
     return (
         <div className="topo">
