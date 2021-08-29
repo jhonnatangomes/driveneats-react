@@ -1,6 +1,6 @@
 import Item from "./item";
 
-export default function Categorias({pratos, itensSelecionados, setItensSelecionados}){
+export default function Categoria({pratos, itensSelecionados, setItensSelecionados}){
     return (
         <div className={pratos.categoria}>
             <p className="righteous categoria">{pratos.frase}</p>

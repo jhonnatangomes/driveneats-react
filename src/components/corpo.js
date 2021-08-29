@@ -1,4 +1,4 @@
-import Categorias from "./categorias";
+import Categoria from "./categoria";
 import aguaDeCoco from "../imagens/agua-de-coco.jpg";
 import churrasco from "../imagens/churrasco.jpg";
 import coca from "../imagens/coca.jpg";
@@ -108,7 +108,7 @@ let categorias = [
 export default function Corpo({itensSelecionados, setItensSelecionados}){
     return(
         <div className="corpo">
-            {categorias.map((categoria, i) => <Categorias pratos={categoria} key={i} itensSelecionados={itensSelecionados} setItensSelecionados={setItensSelecionados}/>)}
+            {categorias.map((categoria, i) => <Categoria pratos={categoria} key={i} itensSelecionados={itensSelecionados} setItensSelecionados={setItensSelecionados}/>)}
         </div>
     );
 }

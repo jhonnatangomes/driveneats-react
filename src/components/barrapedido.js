@@ -1,4 +1,6 @@
-export default function BarraPedido({itensSelecionados}) {
+import {Link} from "react-router-dom";
+
+export default function BarraPedido({itensSelecionados, setItensSelecionados}) {
 
     let URL_WHATSAPP = "https://wa.me/5517997372284?text=";
     function fecharPedido() {
@@ -7,7 +9,8 @@ export default function BarraPedido({itensSelecionados}) {
             if(itensSelecionados[key].length === 0) fechar = false;
         }
 
-        if(fechar) concluirPedido();
+        console.log(itensSelecionados);
+        // if(fechar) escreverConfirmacao();
         return fechar;
     }
 
@@ -30,13 +33,24 @@ export default function BarraPedido({itensSelecionados}) {
         URL_WHATSAPP += encodeURIComponent(text);
     }
 
+    // function escreverConfirmacao() {
+    //     let itens = [];
+    //     for(let key of Object.keys(itensSelecionados)){
+    //         for(let item of itensSelecionados[key]){
+    //             itens.push(item);
+    //         }
+    //     }
+    // }
+
     return (
         <div className="barra-pedido">
-        {fecharPedido() ? <div className="pedido">
-        <a href={URL_WHATSAPP}><button className="roboto fechar-pedido">Fechar pedido</button></a>
-        </div> : <div className="pedido">
+        {fecharPedido() ? <Link to={{pathname: "/revisar", state: itensSelecionados}}><div className="pedido">
+        <button className="roboto fechar-pedido">Fechar pedido</button>
+        </div></Link> : <div className="pedido">
             <button className="roboto">Selecione os 3 itens para fechar o pedido</button>
         </div>}
     </div>
     );
 }
+
+

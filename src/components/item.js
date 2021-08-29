@@ -35,7 +35,7 @@ export default function Item({categoria, itensSelecionados, setItensSelecionados
         setItensSelecionados({...itensSelecionados, [categoria]: updatedItem});
         
         if(contador === 1 && button === "-") {
-            setClasseDiv("item robotod");
+            setClasseDiv("item roboto");
             setClasseContador("contador escondido");
             setContador(1);
             setItensSelecionados({...itensSelecionados, [categoria] : itensSelecionados[categoria].filter((elemento) => elemento.nome !== item.nome)});

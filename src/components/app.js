@@ -1,9 +1,15 @@
 import Topo from "./topo";
 import Corpo from "./corpo";
 import BarraPedido from "./barrapedido";
+import Confirmacao from "./confirmacao";
 import React, { useState } from "react";
 import "../css/reset.css";
 import "../css/styles.css";
+import {
+    BrowserRouter as Router,
+    Switch, 
+    Route
+} from "react-router-dom";
 
 export default function App(){
 
@@ -12,10 +18,17 @@ export default function App(){
     });
 
     return (
-        <>
-        <Topo />
-        <Corpo itensSelecionados={itensSelecionados} setItensSelecionados={setItensSelecionados}/>
-        <BarraPedido itensSelecionados={itensSelecionados}/>
-        </>
+        <Router>
+            <Topo />
+            <Switch>
+                <Route path="/revisar">
+                    <Confirmacao />
+                </Route>
+                <Route path="/">
+                    <Corpo itensSelecionados={itensSelecionados} setItensSelecionados={setItensSelecionados}/>
+                    <BarraPedido itensSelecionados={itensSelecionados} setItensSelecionados={setItensSelecionados}/>
+                </Route>
+            </Switch>
+        </Router>
     );
 }
